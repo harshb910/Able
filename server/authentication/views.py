@@ -1,5 +1,7 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render, redirect, HttpResponse
 
-# Create your views here.
 def home(request):
-    return HttpResponse('Welcome to the home page')
+    return render(request,'authentication/login.html')
+
+def login(request):
+    return render(request,'authentication/login.html')
