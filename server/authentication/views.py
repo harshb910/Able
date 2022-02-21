@@ -1,7 +1,13 @@
-from django.shortcuts import render, redirect, HttpResponse
+from django.shortcuts import render, redirect
 
+# Create your views here.
 def home(request):
-    return render(request,'authentication/login.html')
+    return redirect('login')
+
 
 def login(request):
-    return render(request,'authentication/login.html')
+    return render(request, 'authentication/login.html')
+
+
+def register(request):
+    return render(request, 'authentication/register.html')

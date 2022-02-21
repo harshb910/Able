@@ -1,0 +1,85 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block title %} Register {% endblock %}
+{% block content %}
+
+
+
+<div class="container-fluid">
+    <div class="row gx-3">
+        <div class="col col-lg-4 w-50 bg-light rounded">
+            <div class="row py-4">
+                <h2 class="fs-1 fw-bold"> Welcome to Lead Management System!</h2>
+            </div>
+            <div class="row py-4" style="color: #566574">
+                <h3 class="fs-2 fw-bold">Please register yourself to begin your journey</h3>
+            </div>
+            <div class="row">
+                <img src="{% static 'desc.svg' %}" alt="Photo">
+            </div>
+        </div>
+
+        <div class="col col-lg-4 p-5 d-flex justify-content-center align-items-center">
+            <div class="col col-md-9 py-4 container rounded-2 " style="border: 1px solid #dfe0e0">
+                <div class="row">
+                    <h5 class="fs-2 py-4">Create a new account</h5>
+                </div>
+                <div class="row">
+                    <form action='/' method="POST">
+                        <div class="row">
+                            <div class="col mb-3">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="First Name"
+                                    name = "first_name"
+                                />
+                            </div>
+                            <div class="col mb-3">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Last Name"
+                                    name = "last_name"
+                                />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+							<input
+								type="email"
+								class="form-control"
+								aria-describedby="emailHelp"
+								placeholder="Enter email address"
+                                name = "email"
+							/>
+						</div>
+                        {% comment %}Adding functionality of validating email {% endcomment %}
+						<div class="mb-3">
+							<input
+								type="password"
+								class="form-control"
+								placeholder="Enter Password"
+                                name = "password"
+							/>
+						</div>
+                        <div class="mb-3">
+							<input
+								type="password"
+								class="form-control"
+								placeholder="Confirm Password"
+                                name = "password"
+							/>
+						</div>
+						<button type="submit" class="btn btn-primary w-100 mt-3 mb-4">
+							Register Me
+						</button>
+                    </form>
+                </div>
+            </div>   
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
